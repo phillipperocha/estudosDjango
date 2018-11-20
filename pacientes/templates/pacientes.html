@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+    {% for paciente in pacientes %}
+
+        <!-- abaixo estamos mandando um parâmetro para a url que é o ID do paciente. -->
+        <li>
+            <a href="{% url 'paciente_atualizar' paciente.id %}">{{ paciente.nome }}</a>
+            <a href="{% url 'paciente_deletar' paciente.id %}">Deletar</a>
+
+        </li>
+
+    {% endfor %}
+
+    <br/><a type="button" href="{% url 'paciente_criar' %}">Novo Paciente</a>
+    </ul>
+</body>
+</html>

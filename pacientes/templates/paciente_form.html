@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <!-- o action é o que nosso form vai fazer quando clicarmos em salvar -->
+    <!-- aqui que vai servir os apelidos das URLS que criamos -->
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %} <!-- proteção automatica para forms do django -->
+        {{ form }}
+        <button type="submit">ENVIAR</button>
+    </form>
+
+
+</body>
+</html>

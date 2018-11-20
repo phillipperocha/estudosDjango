@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>Filmes!</h1>
+
+    {% if ano > 0 %}
+        <h1>Filme: {{ nome_filme}} do ano {{ ano }}.</h1>
+    {% else %}
+        <h1>Filme não encontrado.</h1>
+    {% endif %}
+</body>
+</html>
